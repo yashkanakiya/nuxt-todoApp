@@ -1,7 +1,6 @@
 <template>
   <div class="flex flex-col justify-center items-center space-y-5 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 h-screen">
 
-    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
     <lord-icon
     src="https://cdn.lordicon.com/nobciafz.json"
     trigger="hover"
@@ -13,7 +12,6 @@
 
     <div class="bg-gradient-to-r from-white to-yellow-300 p-10 rounded-2xl text-2xl text-green-500 font-semibold">
 
-    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
     <lord-icon
     src="https://cdn.lordicon.com/wloilxuq.json"
     trigger="loop"
@@ -31,6 +29,8 @@
       <br>
       <button class="bg-blue-600 rounded-xl text-white px-3 py-1 font-semibold tracking-wider" type="submit">ADD</button>
     </form>
+
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
   </div>
 </template>
 
@@ -47,7 +47,6 @@ export default {
     return {
       store: useStore()
     }
-   
   },
   computed: {
     lists() {
