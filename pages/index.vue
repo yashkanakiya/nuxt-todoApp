@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import { mapWritableState } from 'pinia'
+import { mapActions } from 'pinia'
 import { useStore } from '~/store/todos'
 export default {
   // data() {
@@ -49,21 +51,29 @@ export default {
     }
   },
   computed: {
-    lists() {
-      // return this.$store.state.todos.lists
-      return this.store.lists
-    }
-  },
+    ...mapWritableState(useStore,['lists'])
+
+      // OR
+
+  //   lists() {
+  //     // return this.$store.state.todos.lists
+  //     return this.store.lists
+  //   }
+  // },
   // mounted() {
   //   alert(this.$store.state.todos.lists)
-  // },
+  },
   methods: {
+    ...mapActions(useStore,['add']),
     sub() {
       if(this.todo) {
         // this.lists.push(this.todo)
         // this.$store.commit('todos/add',this.todo)
+          this.add(this.todo)
 
-        this.store.add(this.todo)
+          // OR
+
+        // this.store.add(this.todo)
         this.todo = ''
       }
     },
